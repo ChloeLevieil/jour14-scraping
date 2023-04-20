@@ -11,7 +11,7 @@ puts page.class
 
 all_names_links = page.xpath('//tbody/tr/td/div/a[@class="cmc-table__column-name--name cmc-link"]').map{ |tri| tri.text }
 
-all_prices_links = page.xpath('//tbody/tr/td/div/a[@class="cmc-table-row"]').map{ |tri2| tri2 }
+all_prices_links = page.xpath('//tbody/tr/td/div/a[@class="cmc-link"]').map{ |element_2| element_2.text}
 
 puts all_names_links.inspect
 puts all_prices_links.inspect
@@ -20,3 +20,5 @@ puts all_prices_links.inspect
 # hash = all_names_links.zip(all_prices_links).to_h
 # print hash
 # end
+
+hash = [all_names_links, all_prices_links].transpose.to_h
