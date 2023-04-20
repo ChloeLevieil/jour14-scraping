@@ -22,3 +22,5 @@ puts all_prices_links.inspect
 # end
 
 hash = [all_names_links, all_prices_links].transpose.to_h
+
+puts hash.inspect
